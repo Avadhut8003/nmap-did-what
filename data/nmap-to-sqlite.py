@@ -9,6 +9,10 @@ import argparse
 #
 
 def parse_nmap_xml(xml_file):
+    with open(xml_file, 'r') as f:
+        xml_content = f.read()
+        print("XML Content:", xml_content)  # Debug statement
+
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
